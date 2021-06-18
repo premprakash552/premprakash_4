@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class MeetUpController {
 
-    @Autowired(required = true)
+    @Autowired()
     private MeetupService service;
 
     // Add a Meetup
@@ -20,7 +20,7 @@ public class MeetUpController {
        return service.addMeetups(meetup);
     }
 
-    //Get All Meetups based on criteria
+    //Get All Meetups based on criteria (TODO)
     @GetMapping("/v1/honeywell/meetups")
     @ResponseBody
     public List<Meetup> getAllMeetup() {
